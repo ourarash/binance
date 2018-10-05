@@ -7,14 +7,16 @@ declare class BinanceRest {
     recvWindow,
     timeout,
     disableBeautification,
-    handleDrift
+    handleDrift,
+    onlyCreateRequest,
   }: {
     key: string,
     secret: string,
     recvWindow?: number,
     timeout?: number,
     disableBeautification?: boolean,
-    handleDrift?: boolean
+    handleDrift?: boolean,
+    onlyCreateRequest?: boolean
   }): BinanceRest;
 
   account: (query: object | Callback, callback?: Callback) => Promise<object> | void;
